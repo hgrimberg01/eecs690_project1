@@ -3,6 +3,12 @@ package edu.ku.eecs.agiledev.core;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import org.jdesktop.swingx.JXFrame;
+import java.awt.BorderLayout;
+import org.jdesktop.swingx.JXMultiSplitPane;
+import org.jdesktop.swingx.MultiSplitLayout;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 
 public class BaseWindow {
 
@@ -38,6 +44,9 @@ public class BaseWindow {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(new GridLayout(1, 2, 0, 0));
+		
+		JXMultiSplitPane multiSplitPane = new JXMultiSplitPane();
+		frame.getContentPane().add(multiSplitPane);
 	}
-
 }
