@@ -1,6 +1,9 @@
 package edu.ku.eecs.agiledev.core;
 
 import java.awt.Window;
+
+
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -8,11 +11,22 @@ import java.io.ObjectOutputStream;
 import java.lang.management.ManagementFactory;
 import java.util.ArrayList;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.SplitPane;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import edu.ku.eecs.agiledev.init.StartupWizard;
 import edu.ku.eecs.agiledev.menu.Menu;
 import edu.ku.eecs.agiledev.users.BaseUser;
-
-public class Main {
+import javafx.application.Application;
+import javafx.collections.ObservableList;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.fxml.FXMLLoader;
+public class Main extends Application{
 	/**
 	 * Session holds anything that relates to a given instance of an application
 	 * (remote host/database connections, locale settings, etc.)
@@ -20,7 +34,8 @@ public class Main {
 	@SuppressWarnings("unused")
 	private static ApplicationSession session = new ApplicationSession();
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
+		launch(args);
 		// TODO Auto-generated method stub
 		String homeDir = System.getProperty("user.home");
 		String pathSep = System.getProperty("file.separator");
@@ -75,6 +90,38 @@ public class Main {
 		} else {
 			System.out
 					.println("Settings are correct, Fire up main menu here...");
+		}
+	}
+	
+	public void start(Stage primaryStage) {
+		try {
+			
+			
+			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Sample.fxml"));
+			
+			Scene scene = new Scene(root,1024,768);
+
+		
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			primaryStage.centerOnScreen();
+			AnchorPane element = (AnchorPane)FXMLLoader.load(getClass().getResource("order_screen.fxml"));
+			ObservableList<Node> temp = root.getChildren();
+			SplitPane f = (SplitPane) temp.get(0);
+			ObservableList<Node> temp2 = f.getItems();
+			AnchorPane ts = (AnchorPane) temp2.get(1);
+			ts.getChildren().add(element);
+			
+			
+	//		AnchorPane s2 = (AnchorPane) temp2.get(0);
+		//	s2.getChildren().set(0, element);
+			
+			
+			
+			primaryStage.show();
+			
+		} catch(Exception e) {
+			e.printStackTrace();
 		}
 	}
 }
