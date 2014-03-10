@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<anttasks:AntTask xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:anttasks="http://org.eclipse.fx.ide.jdt/1.0" buildDirectory="C:\Users\Howard\git\eecs690_project1\EECS690_project1">
+  <deploy embedjnlp="true" height="768" placeholderref="P1" placeholderid="V1" width="1024" packagingFormat="exe">
+    <application name="test" mainclass="edu.ku.eecs.agiledev.core.Main" version="0.0.1a" toolkit="fx"/>
+    <info title="Project 1" vendor="MASH">
+      <splash href="https://dl.dropboxusercontent.com/u/28009852/splash.png"/>
+    </info>
+  </deploy>
+  <signjar/>
+</anttasks:AntTask>

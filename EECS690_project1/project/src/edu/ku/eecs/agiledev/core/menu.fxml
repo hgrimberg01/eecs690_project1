@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Button id="btnNew" layoutX="239.0" layoutY="331.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="92.0" text="New" textAlignment="CENTER">
+      <font>
+        <Font size="24.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Button id="btnSave" font="$x1" layoutX="348.0" layoutY="331.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="92.0" text="Save" textAlignment="CENTER" />
+    <Button id="btnSave" layoutX="457.0" layoutY="331.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="92.0" text="Delete" textAlignment="CENTER">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Button>
+    <Separator layoutX="14.0" layoutY="319.0" prefWidth="572.0" />
+    <Label layoutX="36.0" layoutY="26.0" text="Name:">
+      <font>
+        <Font size="17.0" fx:id="x2" />
+      </font>
+    </Label>
+    <TextField layoutX="95.0" layoutY="27.0" prefWidth="267.0" />
+    <Label font="$x2" layoutX="36.0" layoutY="73.0" prefWidth="81.0" text="Start Time:" />
+    <ChoiceBox cache="true" layoutX="124.0" layoutY="75.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label font="$x2" layoutX="219.0" layoutY="73.0" prefWidth="81.0" text="End Time:" />
+    <ChoiceBox cache="true" layoutX="300.0" layoutY="74.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label font="$x2" layoutX="36.0" layoutY="115.0" prefWidth="154.0" text="Items On Menu:" />
+    <Label font="$x2" layoutX="273.0" layoutY="115.0" prefWidth="154.0" text="Available Items:" />
+    <ListView layoutX="36.0" layoutY="138.0" prefHeight="170.0" prefWidth="200.0" />
+    <ListView layoutX="273.0" layoutY="138.0" prefHeight="170.0" prefWidth="200.0" />
+  </children>
+</AnchorPane>

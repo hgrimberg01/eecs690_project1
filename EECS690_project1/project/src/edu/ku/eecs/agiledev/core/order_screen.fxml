@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" cache="true" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="790.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <TabPane layoutX="14.0" layoutY="14.0" prefHeight="698.0" prefWidth="424.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Ticket #1">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+    <Button defaultButton="true" layoutX="578.0" layoutY="20.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="148.0" text="Add Item">
+      <font>
+        <Font size="24.0" />
+      </font>
+    </Button>
+    <Button defaultButton="false" layoutX="578.0" layoutY="100.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="148.0" text="Close Ticket" textAlignment="CENTER" underline="false" wrapText="true">
+      <font>
+        <Font size="22.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Button defaultButton="false" font="$x1" layoutX="578.0" layoutY="181.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="148.0" text="Split Ticket" textAlignment="CENTER" underline="false" wrapText="true" />
+    <Button defaultButton="false" font="$x1" layoutX="578.0" layoutY="266.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="148.0" text="Remove Item" textAlignment="CENTER" underline="false" wrapText="true" />
+    <Button defaultButton="false" font="$x1" layoutX="578.0" layoutY="353.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="148.0" text="Combine Tables" textAlignment="CENTER" underline="false" wrapText="true" />
+    <Separator layoutX="495.0" layoutY="15.0" orientation="VERTICAL" prefHeight="711.0" prefWidth="36.0" />
+  </children>
+</AnchorPane>
