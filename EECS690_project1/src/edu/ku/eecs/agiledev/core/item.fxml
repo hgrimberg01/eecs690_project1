@@ -7,15 +7,15 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="AnchorPane" fx:id="itemForm" cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="790.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="edu.ku.eecs.agiledev.core.ItemFormController">
   <children>
-    <Button id="btnNew" layoutX="239.0" layoutY="331.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="92.0" text="New" textAlignment="CENTER">
+    <Button id="btnNew" fx:id="btnNewItem" layoutX="239.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#btnNewClickHandler" prefHeight="42.0" prefWidth="92.0" text="New" textAlignment="CENTER">
       <font>
         <Font size="24.0" fx:id="x1" />
       </font>
     </Button>
-    <Button id="btnSave" font="$x1" layoutX="348.0" layoutY="331.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="92.0" text="Save" textAlignment="CENTER" />
-    <Button id="btnSave" layoutX="457.0" layoutY="331.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="92.0" text="Delete" textAlignment="CENTER">
+    <Button id="btnSave" fx:id="btnSaveItem" defaultButton="true" font="$x1" layoutX="349.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#btnSaveClickHandler" prefHeight="42.0" prefWidth="92.0" text="Save" textAlignment="CENTER" />
+    <Button fx:id="btnDelete" cancelButton="false" layoutX="457.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#btnDeleteClickHandler" prefHeight="42.0" prefWidth="92.0" text="Delete" textAlignment="CENTER">
       <font>
         <Font size="20.0" />
       </font>
@@ -32,8 +32,9 @@
       </font>
     </Label>
     <Label font="$x2" layoutX="27.0" layoutY="116.0" text="Addons:" />
-    <ListView layoutX="95.0" layoutY="116.0" prefHeight="106.0" prefWidth="486.0" />
-    <TextField layoutX="95.0" layoutY="27.0" prefWidth="267.0" />
-    <TextField layoutX="95.0" layoutY="70.0" prefWidth="84.0" />
+    <ListView fx:id="addonList" layoutX="95.0" layoutY="116.0" prefHeight="106.0" prefWidth="486.0" />
+    <TextField fx:id="iName" layoutX="95.0" layoutY="27.0" prefWidth="267.0" />
+    <TextField fx:id="iPrice" layoutX="95.0" layoutY="70.0" prefWidth="84.0" />
+    <ListView fx:id="itemList" layoutX="601.0" layoutY="16.0" onMouseClicked="#btnItemClickHandler" prefHeight="354.0" prefWidth="180.0" />
   </children>
 </AnchorPane>

@@ -5,8 +5,11 @@ import java.awt.Window;
 
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.lang.management.ManagementFactory;
 import java.util.ArrayList;
@@ -33,9 +36,30 @@ public class Main extends Application{
 	 */
 	@SuppressWarnings("unused")
 	private static ApplicationSession session = new ApplicationSession();
+	public static Restaurant db;
+	
+	
+	public static void save() throws IOException {
+		
+		
+		
+		String homeDir = System.getProperty("user.home");
+		String pathSep = System.getProperty("file.separator");
 
-	public static void main(String[] args)  {
-		launch(args);
+		String path = homeDir + pathSep + "pos.properties";
+		File settings = new File(path);
+		
+		
+		FileOutputStream fout = new FileOutputStream(path);
+
+		ObjectOutputStream oos = new ObjectOutputStream(fout);
+		oos.writeObject(Main.db);
+		oos.flush();
+		oos.close();
+		
+	}
+	public static void main(String[] args) throws IOException, ClassNotFoundException  {
+		
 		// TODO Auto-generated method stub
 		String homeDir = System.getProperty("user.home");
 		String pathSep = System.getProperty("file.separator");
@@ -88,8 +112,12 @@ public class Main extends Application{
 			}
 
 		} else {
-			System.out
-					.println("Settings are correct, Fire up main menu here...");
+			
+			FileInputStream fin = new FileInputStream(path);
+			ObjectInputStream ins = new ObjectInputStream(fin);
+			Main.db = (Restaurant) ins.readObject();
+			
+			launch(args);
 		}
 	}
 	
@@ -100,7 +128,8 @@ public class Main extends Application{
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Sample.fxml"));
 			
 			Scene scene = new Scene(root,1024,768);
-
+	        primaryStage.setTitle("Project 1");
+	        primaryStage.setResizable(false);
 		
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
