@@ -34,9 +34,7 @@ public class ItemFormController {
 
 	@FXML
 	public void btnItemClickHandler(MouseEvent arg0) throws IOException {
-		System.out.println("clicked on "
-				+ itemList.getSelectionModel().getSelectedItem());
-
+		
 		Item selected = itemList.getSelectionModel().getSelectedItem();
 
 		iPrice.setText((new Float(selected.getPrice())).toString());

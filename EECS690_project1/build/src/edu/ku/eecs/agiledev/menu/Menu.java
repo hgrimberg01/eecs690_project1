@@ -20,6 +20,7 @@ public class Menu implements java.io.Serializable {
 	private static final long serialVersionUID = -8039496140330772584L;
 	private Set<Item> menuItems;
 	private Set<DailySpecial> menuSpecials;
+	private Set<AddOn> addOns;
 	private Date menuCreationDate;
 	private Date menuModificationDate;
 	private String menuName;
@@ -118,6 +119,14 @@ public class Menu implements java.io.Serializable {
 	public String toString() {
 		return getMenuName();
 
+	}
+
+	public Set<AddOn> getAddOns() {
+		return addOns;
+	}
+
+	public void setAddOns(Set<AddOn> addOns) {
+		this.addOns = addOns;
 	}
 
 }

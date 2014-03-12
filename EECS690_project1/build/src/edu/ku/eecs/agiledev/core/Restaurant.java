@@ -1,9 +1,12 @@
 package edu.ku.eecs.agiledev.core;
 
 import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 import edu.ku.eecs.agiledev.floorplan.ServableTable;
 import edu.ku.eecs.agiledev.menu.Menu;
+import edu.ku.eecs.agiledev.ticket.Ticket;
 import edu.ku.eecs.agiledev.users.BaseUser;
 
 /**
@@ -22,6 +25,7 @@ public class Restaurant implements java.io.Serializable {
 	private List<BaseUser> users;
 	private List<ServableTable> tables;
 	private List<Tax> taxes;
+	private Map<UUID,Ticket> openTickets;
 
 	public Restaurant() {
 
@@ -84,6 +88,20 @@ public class Restaurant implements java.io.Serializable {
 	 */
 	public void setTaxes(List<Tax> taxes) {
 		this.taxes = taxes;
+	}
+
+	/**
+	 * @return the openTickets
+	 */
+	public Map<UUID,Ticket> getOpenTickets() {
+		return openTickets;
+	}
+
+	/**
+	 * @param openTickets the openTickets to set
+	 */
+	public void setOpenTickets(Map<UUID,Ticket> openTickets) {
+		this.openTickets = openTickets;
 	}
 
 }

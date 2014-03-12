@@ -6,8 +6,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 
 import edu.ku.eecs.agiledev.core.Tax;
@@ -60,7 +62,7 @@ public class StartupWizard {
 		System.out.print("Please enter the Initial Tax Rate(as a decimal):");
 		s = bufferRead.readLine();
 		tax.setTaxPercent(new Float(s));
-		
+
 		return tax;
 	}
 
@@ -115,6 +117,7 @@ public class StartupWizard {
 
 	}
 
+	@SuppressWarnings("unchecked")
 	public static Menu MenuCreation() throws IOException {
 
 		menu.setMenuID(UUID.randomUUID());
@@ -149,7 +152,8 @@ public class StartupWizard {
 
 			}
 		}
-
+		menu.setMenuItems(new HashSet<Item>(ITEMS));
+		menu.setAddOns(new HashSet<AddOn>(ADDONS));
 		return menu;
 
 	}
