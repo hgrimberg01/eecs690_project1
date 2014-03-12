@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="itemPopip" cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Button fx:id="yes" defaultButton="true" layoutX="14.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="122.0" text="OK">
+      <font>
+        <Font name="System Bold" size="24.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Button fx:id="no" cancelButton="true" defaultButton="false" font="$x1" layoutX="164.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="122.0" text="Cancel" />
+    <ListView fx:id="menuItems" cache="true" cacheHint="SPEED" disable="false" editable="false" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" orientation="VERTICAL" pickOnBounds="false" prefHeight="281.0" prefWidth="272.0" style=".text-size:24 px;" />
+  </children>
+</AnchorPane>
