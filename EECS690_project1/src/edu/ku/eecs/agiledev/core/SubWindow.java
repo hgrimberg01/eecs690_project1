@@ -10,6 +10,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -33,10 +34,14 @@ public class SubWindow extends Stage {
 			@Override
 			public void handle(ActionEvent e) {
 				postStatus = true;
+	
+				
+			
 				stage.close(); // Close the pop up. Transfer control to
 								// PostTransaction.java and execute the
 								// PostTransaction() method.
-
+				
+				
 			}
 		});
 

@@ -74,6 +74,8 @@ public class OrderController {
 		ObservableList<Item> fits = FXCollections.observableArrayList(its);
 
 		lView.setItems(fits);
+		
+		
 
 		SubWindow w = new SubWindow(Main.stage, "Menu Items", internalPane);
 
